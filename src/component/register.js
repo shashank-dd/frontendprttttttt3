@@ -12,7 +12,7 @@ const Register = () => {
    console.log(check)
     console.log(form)
     if( validate(form)&&check){
-        axios.post("http://localhost:8080/register/register", form).then(response => {
+        axios.post("https://backapi-e13q.onrender.com/register/register", form).then(response => {
             console.log(response.data.status)
             if (response.data.status === "ok") {
                 alert("registered succesfully")

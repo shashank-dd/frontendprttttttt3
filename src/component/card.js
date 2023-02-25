@@ -16,8 +16,9 @@ function Card({data}) {
             }
             
             }><img src={data.image}></img></div>
+             <h2 className='red'  > Title  : {data.title}</h2>
             {n&&<div className='l1'  id='gh'>
-              <h2 className='red'  > Title  : {data.title}</h2>
+             
               
               <p className='blue' id='bl'  onClick={()=>{
                 seti((d)=>!d)

@@ -4,11 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from "axios";
 import logo from "./gg.png"
+import Card from "./card"
 function HomePage() {
 
   const [dta, setdta] = useState([])
   const [ta, setta] = useState([])
   const [name, setname] = useState("")
+
 
 
   let navigate = useNavigate()
@@ -54,15 +56,7 @@ function HomePage() {
       }}></input>
       <div id='body'>
         {ta && ta.map((data) => {
-          return <div id='ll'>
-            <div className='l1' id='hjk'><img src={data.image}></img></div>
-            <div className='l1' id='hjkl' >
-              <h2 className='red'  > Title  : {data.title}</h2>
-              <p className='blue' id='bl' >Ingradients</p>
-              <p className='blue'>{data.description}</p>
-              <p className='green'> by: {name}</p>
-            </div>
-          </div>
+          return  <Card  data={data}  />
         })}
 
 

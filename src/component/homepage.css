@@ -68,6 +68,15 @@ color: green;
     height: 40px;
 }
 
-#hjkl:active +#hjk{
-    display:block;
+#hjkl{
+    display:none;
+}
+#gh{
+    position: relative;
+    left: 4px;
+    top: 5px;
+}
+#bl{
+    color: rgb(10, 83, 11);
+    font-size: 2rem;
 }

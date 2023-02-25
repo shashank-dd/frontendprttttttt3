@@ -5,6 +5,8 @@ import './homepage.css';
 function Card({data}) {
 
     const [n, setn] = useState(false)
+    const [i, seti] = useState(false)
+    const [j, setj] = useState(false)
 
   return (
 
@@ -16,10 +18,15 @@ function Card({data}) {
             }><img src={data.image}></img></div>
             {n&&<div className='l1'  id='gh'>
               <h2 className='red'  > Title  : {data.title}</h2>
-              <p className='blue' id='bl' >Ingradients</p>
-              <p className='blue'>{data.description}</p>
-              <p className='blue' id='bl' >directions</p>
-              <p className='blue'>{data.direction}</p>
+              
+              <p className='blue' id='bl'  onClick={()=>{
+                seti((d)=>!d)
+              }}>Ingradients</p>
+              {i&&<p className='blue'>{data.description}</p>}
+              <p className='blue' id='bl'   onClick={()=>{
+                setj((d)=>!d)
+              }} >directions</p>
+             { j&&<p className='blue'>{data.direction}</p>}
               <p className='green'> by: {data.auther}</p>
             </div>}
     </div>

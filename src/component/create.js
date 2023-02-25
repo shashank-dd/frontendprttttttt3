@@ -43,7 +43,7 @@ async function hh() {
        
         
         
-        <Link to="/create" > <span id='create'>create</span> </Link>
+        <Link to="/create" > <span id='create'>New recipe</span> </Link>
         <span id='log' onClick={logoutHandler}>Logout</span>
         <div className="ba">
       <div><label>recipe title</label><input type="text" onChange={(e)=>{ setpost({...post,title:e.target.value}) }}></input></div>

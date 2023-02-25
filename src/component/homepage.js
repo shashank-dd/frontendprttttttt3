@@ -24,7 +24,9 @@ function HomePage() {
       setname(response.data.user)
       // setgl(response.data.userid)
       // setta(response.data.dat)
-    }).catch(error => { console.log(error, 11111111) })
+    }).catch(error => { console.log(error, 11111111)
+      navigate("/")
+     })
   }, [])
 
    let logoutHandler = () =>{
